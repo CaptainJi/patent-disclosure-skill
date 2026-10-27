@@ -73,4 +73,4 @@ rejects:
 - `hard_requirement_for_disclosure` 在施行日未到时必须为 false。  
 - `candidates[].touch_files` 必须带 `skills/patent-disclosure/` 前缀（改技能旁路）。**禁止**写入 `skills/patent-application/`。  
 - 「全部采纳」只应用交底包白名单内、且交底表能对上的 E*。  
-- 解读 / 检索 / 审查答复 / 申请程序项 / 本包 / 根 `SKILL.md` / 司法口径 / 地方预审 放入 `rejects`，除非用户点名该编号且路径写明。
+- 解读 / 检索 / 审查答复 / 申请程序项 / 本包 / 路由技能 `skills/patent-disclosure-skill/SKILL.md` / 司法口径 / 地方预审 放入 `rejects`，除非用户点名该编号且路径写明。

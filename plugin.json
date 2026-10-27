@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "patent-disclosure-skill",
+  "version": "5.1.0",
+  "description": "中国专利 Agent 插件：交底书、申请文件、案卷、著录检索、通俗解读、专利地图、审查答复、政策简报与权利要求对照表（不构成法律意见）。",
+  "author": {
+    "name": "CaptainJi",
+    "url": "https://github.com/CaptainJi"
+  },
+  "homepage": "https://github.com/CaptainJi/patent-disclosure-skill",
+  "repository": "https://github.com/CaptainJi/patent-disclosure-skill",
+  "license": "MIT",
+  "keywords": [
+    "patent",
+    "china",
+    "cnipa",
+    "disclosure",
+    "agent-skills",
+    "agent-plugins"
+  ]
+}

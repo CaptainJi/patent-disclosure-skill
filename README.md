@@ -8,6 +8,7 @@
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-mermaid%20%2B%20CNIPA-2EAD33.svg)](https://playwright.dev/)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+[![Agent Plugins](https://img.shields.io/badge/Agent%20Plugins-1.0.0-blue)](https://github.com/agentplugins/agent-plugins-spec)
 
 <br>
 
@@ -15,7 +16,7 @@
 定稿后还要**多轮补材料、纠错**并留下修改追溯？<br>
 公开专利晦涩难懂，想**快速看懂权要与落地语境**？
 
-[初衷](#初衷) · [运行效果](#运行效果) · [子技能列表](#子技能列表) · [支持作者](#支持作者) · [参考文档](#参考文档) · [安装说明](INSTALL.md) · [技能入口](SKILL.md)
+[初衷](#初衷) · [运行效果](#运行效果) · [子技能列表](#子技能列表) · [支持作者](#支持作者) · [参考文档](#参考文档) · [安装说明](INSTALL.md) · [路由技能](skills/patent-disclosure-skill/SKILL.md)
 
 </div>
 
@@ -97,6 +98,14 @@
 </td>
 </tr>
 </table>
+
+---
+
+## Agent Plugins 1.0
+
+本仓库根目录提供 [`plugin.json`](plugin.json)（`$schema`: Agent Plugins 1.0.0），符合 [Agent Plugins 规范](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md)。技能从 `skills/<id>/SKILL.md` 发现；**总路由**在 [`skills/patent-disclosure-skill/SKILL.md`](skills/patent-disclosure-skill/SKILL.md)（`name: patent-disclosure-skill`）。无 MCP 服务器，故不包含 `mcp.json`。
+
+**安装（通用）**：将本仓库克隆或解压到客户端的插件/技能目录，确保 `plugin.json` 位于插件根。具体路径因客户端而异，见 [INSTALL.md](INSTALL.md)。
 
 ---
 
@@ -212,7 +221,8 @@
 
 ## 参考文档
 
-- [技能入口与 Agent 流程](SKILL.md)（交底 / 申请文件 / 案卷会稿 / 著录检索 / 解读 / 政策简报 / 审查答复）
+- [路由技能与 Agent 流程](skills/patent-disclosure-skill/SKILL.md)（交底 / 申请文件 / 案卷会稿 / 著录检索 / 解读 / 政策简报 / 审查答复）
+- [Agent Plugins 清单](plugin.json)
 - [详细安装说明](INSTALL.md)
 - [Obsidian 安装与可选社区插件（Windows）](skills/patent-reader/docs/obsidian-setup-guide.md)
 
