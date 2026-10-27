@@ -17,7 +17,7 @@
 
 依赖：`pip install playwright`（或根目录 `requirements.txt`）。浏览器见 **`tools/browser.py`**。查新说明见 **`prompts/prior_art_search.md`**。
 
-著录检索（发明人/申请人/分类号等高级查询）是另一个技能包，**不是**本目录脚本。本包查新只用上面的 `crawl/`，不要 import、不要调用检索爬虫。整仓时入口在仓库根 `SKILL.md`。
+著录检索（发明人/申请人/分类号等高级查询）是另一个技能包，**不是**本目录脚本。本包查新只用上面的 `crawl/`，不要 import、不要调用检索爬虫。整仓时路由入口在 `skills/patent-disclosure-skill/SKILL.md`。
 
 抓取失败时降级 **WebSearch**（Google 学术**无**专利类型过滤；Google Patents 支持 PATENT/DESIGN，实用新型靠关键词+国知局）。
 

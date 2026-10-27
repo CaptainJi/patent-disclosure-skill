@@ -11,7 +11,7 @@
 - `skills/patent-disclosure/references/**`
 - `skills/patent-disclosure/SKILL.md`
 
-仓库根 `SKILL.md`：**不**随「全部采纳」；仅当被点名的 E* 影响面=路由。  
+`skills/patent-disclosure-skill/SKILL.md`：**不**随「全部采纳」；仅当被点名的 E* 影响面=路由。  
 `skills/patent-application/`：**不改**（即使点名 E*；申请书式只在简报第 4 节说明）。  
 其他子包与本包：仅当用户点名的 E* 已写明该包完整路径。
 
@@ -41,7 +41,7 @@
 
 - 简报尚未点名改技能时进入本文件并改 prompts  
 - 扩大采纳范围到用户未点名的 E*  
-- 「全部采纳」时改解读 / 检索 / 审查答复 / 申请包 / 本包 / 根 `SKILL.md`  
+- 「全部采纳」时改解读 / 检索 / 审查答复 / 申请包 / 本包 / 路由技能 `skills/patent-disclosure-skill/SKILL.md`  
 - 向 `skills/patent-application/` 写入（申请书式只说明、不进化）  
 - 根据 C 级信源改技能  
 - 仅根据 B 源（发布会、答问、典型案例、司法解释）改技能  

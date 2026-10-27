@@ -1,6 +1,14 @@
 # 安装说明
 
-本技能遵循 [AgentSkills](https://agentskills.io) 常见布局：仓库根目录即技能根目录，内含 `SKILL.md`。
+本仓库是 **[Agent Plugins 1.0](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md)** 可分发插件：根目录 [`plugin.json`](plugin.json) 为便携清单；各技能在 `skills/<id>/SKILL.md`（符合 [Agent Skills](https://agentskills.io)）。**九项能力的路由判定表**在 [`skills/patent-disclosure-skill/SKILL.md`](skills/patent-disclosure-skill/SKILL.md)。仓库根 [`SKILL.md`](SKILL.md) 仅为兼容说明，不会被 Agent Plugins 发现。
+
+## Agent Plugins（推荐）
+
+1. 将整个仓库放到客户端支持的**插件根目录**（目录内应直接可见 `plugin.json` 与 `skills/`）。
+2. 在客户端中加载/启用该插件；应发现 10 个技能（1 个路由 + 9 个子包）。
+3. 未配置 MCP 时无需 `mcp.json`。
+
+若客户端同时支持「单文件夹 = 单技能」的旧布局，仍可将本仓库克隆到其技能目录（见下文 Cursor / Claude Code），但合规分发以 `plugin.json` 为准。
 
 ## Claude Code
 
@@ -13,11 +21,11 @@ git clone <本仓库 URL> .claude/skills/patent-disclosure-skill
 
 或使用本地路径复制到 `.claude/skills/patent-disclosure-skill`。
 
-命令均相对**本技能仓库根**（含根级 `SKILL.md` 的目录），例如 `python skills/patent-disclosure/tools/image_gen.py`。当前工作区不是该仓库时，先定位技能安装目录再拼接。不要依赖厂商环境变量。
+命令均相对**插件仓库根**（含 `plugin.json` 的目录），例如 `python skills/patent-disclosure/tools/image_gen.py`。当前工作区不是该仓库时，先定位插件安装目录再拼接。不要依赖厂商环境变量。
 
 ## Cursor
 
-Cursor 支持 [Agent Skills](https://www.cursor.com/docs/context/skills) 约定：每个技能是一个**子文件夹**，内含根级 `SKILL.md`（`name` 字段须与文件夹名一致，本仓库为 `patent-disclosure-skill`）。可将**本仓库完整内容**（含各 `skills/patent-*` 子包）放在下列位置之一，重启 Cursor 后在 **Settings → Rules** 中查看是否已被发现；亦可用 Agent 输入 `/` 后选择技能名。
+Cursor 支持 [Agent Skills](https://www.cursor.com/docs/context/skills) 与插件目录约定。可将**本仓库完整内容**（含 `plugin.json` 与各 `skills/*`）放在下列位置之一，重启 Cursor 后在 **Settings → Rules** 中查看是否已被发现；路由技能名为 `patent-disclosure-skill`（`skills/patent-disclosure-skill/SKILL.md`）。亦可用 Agent 输入 `/` 后选择技能名。
 
 ### 用户主目录（全局，所有项目可用）
 
@@ -46,7 +54,7 @@ git clone <本仓库 URL> "$env:USERPROFILE\.cursor\skills\patent-disclosure-ski
 
 `<项目根>/.cursor/skills/patent-disclosure-skill/`
 
-（同样需包含完整仓库文件树，且 **`SKILL.md` 中 `name: patent-disclosure-skill` 与文件夹名一致**。）
+（同样需包含完整仓库文件树，含 `plugin.json` 与 `skills/patent-disclosure-skill/SKILL.md`。）
 
 ### 与「仅打开文件夹」等价关系
 
